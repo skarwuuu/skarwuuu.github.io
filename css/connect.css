@@ -20,6 +20,7 @@
     flex-direction: row;
     justify-content: start;
     gap: 100px;
+    padding: 0 30px;
 }
 
 .emailBtn, .resumeBtn {
