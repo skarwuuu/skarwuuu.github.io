@@ -1,0 +1,168 @@
+#about {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+
+    padding-top: 120px;
+    margin-top: 200px;
+}
+
+.about-title{
+    font-family: "Geologica";
+    font-size: 100px;
+    color: white;
+    font-weight: 500;
+    word-spacing: 20px;
+}
+
+.about-content{
+    color: rgb(230, 230, 230);
+    font-size: 34px;
+    font-family: "Space Mono";
+    text-align: justify;
+    line-height: 2;
+    margin-top: -100px;
+}
+
+.first-word{
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: "Chivo Mono";
+}
+
+.second-word{
+    color: black;
+    background-color: white;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-family: "Chivo Mono";
+}
+
+.third-word{
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "Chivo Mono";
+}
+
+.fourth-word{
+    font-size: 45px;
+    font-family: "Geologica";
+    text-decoration: underline;
+}
+
+.fifth-word{
+    color: rgb(69, 69, 69);
+    font-size: 27px;
+}
+
+.about-skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 450px;
+}
+
+.light, .heavy{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.languages, .frameworks, .servers, .game-engines{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+}
+
+.skill-title{
+    color: black;
+    background-color: white;
+    font-size: 50px;
+    font-family: "Space Mono";
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.skill-desc{
+    color: white;
+    font-size: 30px;
+    font-family: "Space Mono";
+    padding: 2px 12px;
+}
+
+/* media changes here */
+
+@media screen and (max-width: 1780px) {
+    .about-skills{
+        gap: 400px;
+    }
+}
+
+@media screen and (max-width: 1760px) {
+    .about-skills {
+        gap: 350px;
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    .about-skills {
+        gap: 300px;
+    }
+}
+
+@media screen and (max-width: 1630px) {
+    .about-skills {
+        gap: 250px;
+    }
+}
+
+@media screen and (max-width: 1580px) {
+    .about-skills {
+        gap: 200px;
+    }
+}
+
+@media screen and (max-width: 1530px) {
+    .about-skills {
+        gap: 160px;
+    }
+}
+
+@media screen and (max-width: 1485px) {
+    .about-skills{
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    .light, .heavy{
+        gap: 80px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #about {
+        padding-top: 180px;
+    }
+
+    .about-content{
+        font-size: 40px;
+    }
+
+    .second-word{
+        padding: 2px 12px;
+    }
+
+    .skill-title{
+        font-size: 65px;
+        padding: 2px 16px;
+    }
+
+    .skill-desc{
+        font-size: 40px;
+        padding: 2px 20px;
+    }
+}

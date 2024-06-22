@@ -1,0 +1,92 @@
+#socials {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    padding-top: 120px;
+    margin-top: 200px;
+}
+
+.socials-title {
+    font-family: "Geologica";
+    font-size: 100px;
+    color: white;
+    font-weight: 500;
+    word-spacing: 20px;
+}
+
+.socials-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.socials-content a{
+    color: black;
+    background-color: white;
+    font-size: 30px;
+    font-family: "Space Mono";
+    border: solid 4px black;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px 25px;
+    transition: all 0.3s;
+}
+
+.github-button:hover {
+    background-color: rgb(2, 0, 20);
+    color: white;
+    border-color: whitesmoke;
+}
+
+.linkedin-button:hover {
+    background-color: #0a66c2;
+    color: white;
+    border-color: whitesmoke;
+}
+
+.insta-button:hover {
+    background-color: #E1306C;
+    color: white;
+    border-color: whitesmoke;
+}
+
+.twitter-button:hover {
+    background-color: #1DA1F2;
+    color: white;
+    border-color: whitesmoke;
+}
+
+.reddit-button:hover {
+    background-color: #FF4500;
+    color: white;
+    border-color: whitesmoke;
+}
+
+.leetcode-button:hover {
+    background-color: #f69c15;
+    color: white;
+    border-color: whitesmoke;
+}
+
+/* media changes here */
+
+@media screen and (max-width: 1880px) {
+    .socials-content {
+        flex-direction: column;
+        gap: 50px;
+        align-items: normal;
+    }
+
+    .socials-content a {
+        font-size: 60px;
+        text-align: center;
+        background-color: rgb(180, 180, 180);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #socials {
+        padding-top: 180px;
+    }
+}

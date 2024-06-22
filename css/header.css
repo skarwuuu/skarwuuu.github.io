@@ -1,0 +1,104 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-shrink: 0;
+    align-items: center;
+    padding: 45px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background-color: inherit;
+    backdrop-filter: blur(20px);
+
+    z-index: 100;
+
+    transition: flex-direction 0.3s ease-in-out;
+}
+
+.menu.change .menuBtn {
+    display: block;
+}
+
+.menuName{
+    font-family: "Chivo Mono";
+    font-size: 35px;
+    font-weight: 400;
+    color: white;
+    border: solid 3px white;
+    border-radius: 6px;
+    padding: 0px 15px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.menuName:hover{
+    color: black;
+    background-color: white;
+    padding: 0px 67.5px;
+}
+
+.menuBtn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+
+.menuBtn a{
+    font-family: "Space Mono";
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 8px;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, opacity 0.12s;
+}
+
+.menuBtn a:hover{
+    color: black;
+    background-color: whitesmoke;
+}
+
+.menuBtn a:active{
+    opacity: 0.6;
+}
+
+/* media changes here */
+
+@media screen and (max-width: 1220px) {
+    header {
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .menuBtn{
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .menuBtn a {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .menuName{
+        font-size: 60px;
+    }
+
+    .menuName:hover{
+        padding: 0px 105px;
+    }
+
+    .menuBtn{
+        gap: 40px;
+    }
+
+    .menuBtn a {
+        font-size: 50px;
+    }
+}

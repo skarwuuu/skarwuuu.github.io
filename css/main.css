@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    cursor: url(/img/custom-cursor.png), auto;
+}
+
+html{
+    scroll-behavior: smooth;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    background-image: linear-gradient(145deg, rgb(40, 40, 40) 10%, rgb(20, 20, 20) 50%, rgb(0, 0, 0) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0px 200px;
+}
+
+.cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    outline: 2px solid #000000;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width 150ms ease-in-out, height 150ms ease-in-out, top 40ms ease-out, left 40ms ease-out;
+    z-index: 101;
+}
+
+.cursor.large {
+    height: 60px;
+    width: 60px;
+}
+
+.cursor.active{
+    height: 30px;
+    width: 30px;
+    transition: width 50ms ease-in-out, height 50ms ease-in-out;
+}
+
+#preloader{
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    margin-left: -200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+#loader::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.1;
+}
+
+#loader::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    animation: wobble 1.55s ease-in-out infinite;
+    transform: translateX(-90%);
+    background-color: rgb(255, 255, 255);
+}
+
+@keyframes wobble {
+
+    0%,
+    100% {
+        transform: translateX(-80%);
+    }
+
+    50% {
+        transform: translateX(80%);
+    }
+}
+
+/* media chnages here */
+
+@media screen and (max-width: 1170px){
+    body{
+        padding: 0 150px;
+    }
+
+    #preloader{
+        margin-left: -150px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    *{
+        cursor: default;
+    }
+
+    .cursor{
+        display: none;
+    }
+}

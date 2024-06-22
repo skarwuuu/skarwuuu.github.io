@@ -1,0 +1,124 @@
+#work {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+
+    padding-top: 120px;
+    margin-top: 200px;
+}
+
+.work-title {
+    font-family: "Geologica";
+    font-size: 100px;
+    color: white;
+    font-weight: 500;
+    word-spacing: 20px;
+}
+
+.work-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title{
+    color: black;
+    background-color: rgb(201, 201, 201);
+    font-family: "Space Mono";
+    font-size: 50px;
+    border: solid black 6px;
+    border-radius: 20px;
+    padding: 0 30px;
+    transition: opacity 0.3s, margin-bottom 0.7s ease-out, border-radius 0.6s ease-out;
+}
+
+.project-title:hover {
+    opacity: 0.8;
+}
+
+.project-title:active {
+    opacity: 0.6;
+}
+
+.project-title.open {
+    border-radius: 50px;
+    margin-bottom: 50px;
+}
+
+.project-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+
+    padding: 0 40px;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, margin-bottom 0.7s ease-out;
+}
+
+.project-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.project-desc{
+    color: white;
+    font-family: "Space Mono";
+    font-size: 35px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.project-link{
+    color: black;
+    background-color: white;
+    font-family: "Space Mono";
+    font-size: 25px;
+    word-spacing: -6px;
+    padding: 5px 15px;
+    border: solid rgb(201, 201, 201) 6px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.project-link:hover {
+    opacity: 0.8;
+}
+
+.project-image{
+    height: 400px;
+    width: 600px;
+    object-fit: cover;
+    border: solid rgb(201, 201, 201) 4px;
+    border-radius: 12px;
+}
+
+/* media changes here */
+
+@media screen and (max-width: 1800px) {
+    .project-panel{
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .project-details{
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #work{
+        padding-top: 180px;
+    }
+}
