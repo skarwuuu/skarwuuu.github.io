@@ -20,6 +20,7 @@
     flex-direction: row;
     justify-content: start;
     gap: 100px;
+    padding: 0 30px;
 }
 
 .emailBtn, .resumeBtn {
@@ -53,13 +54,25 @@
 
 /* media changes here */
 
+@media screen and (max-width: 1210px) {
+    .connect-content {
+        gap: 75px;
+    }
+}
+
+@media screen and (max-width: 1185px) {
+    .connect-content {
+        gap: 60px;
+    }
+}
+
 @media screen and (max-width: 1100px) {
     .connect-content {
         gap: 50px;
     }
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1060px) {
     .connect-content {
         flex-direction: column;
         justify-content: center;
